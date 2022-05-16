@@ -43,56 +43,84 @@ body {
     overflow: hidden;
 }
 .slider-texts {
+    width: 500%;
+    height: 100%;
     display: flex;
 }
 .slider-texts .text {
     width: 20%;
     transition: all 0.5s ease;
 }
-
+.slider-texts .text span {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 .slider-nav {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 .slider-nav .slider-nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.7rem;
+    cursor: pointer;
+}
+.slider-nav .slider-nav-item span {
+    display: block;
     width: 1.1rem;
     height: 1rem;
-    border: 0.2rem solid #fff;
-    margin: 0.5rem;
+    background-color: aquamarine;
+    border: 0.2rem solid aquamarine;
     cursor: pointer;
     transition: all 0.5s ease;
 }
-.slider-nav .slider-nav-item:hover {
+
+
+
+.slider-nav .slider-nav-item span:hover {
     background-color: #fff;
+    border-color: #fff;
 }
-#radio1:checked ~ .slider1 {
+.slider-nav .slider-nav-item:hover span {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.slider-nav .slider-nav-item span:active {
+    background-color: rgba(255, 255, 255, 0);
+    border-color: #fff;
+}
+.slider-nav .slider-nav-item:active span {
+    background-color: rgba(255, 255, 255, 0);
+    border-color: #fff;
+}
+
+#radio1:checked ~ .slider-items .slider1,
+#radio1:checked ~ .slider-tn .slider-texts .text1 {
     margin-left: 0;
 }
-#radio1:checked ~ .text1 {
-    margin-left: 0;
-}
-#radio2:checked ~ .slider1 {
+
+#radio2:checked ~ .slider-items .slider1,
+#radio2:checked ~ .slider-tn .slider-texts .text1 {
     margin-left: -20%;
 }
-#radio1:checked ~ .text1 {
-    margin-left: -20%;
-}
-#radio3:checked ~ .slider1 {
+
+#radio3:checked ~ .slider-items .slider1,
+#radio3:checked ~ .slider-tn .slider-texts .text1 {
     margin-left: -40%;
 }
-#radio1:checked ~ .text1 {
-    margin-left: -40%;
-}
-#radio4:checked ~ .slider1 {
+ 
+#radio4:checked ~ .slider-items .slider1,
+#radio4:checked ~ .slider-tn .slider-texts .text1 {
     margin-left: -60%;
 }
-#radio1:checked ~ .text1 {
-    margin-left: -60%;
-}
-#radio5:checked ~ .slider1 {
-    margin-left: -80%;
-}
-#radio1:checked ~ .text1 {
+ 
+#radio5:checked ~ .slider-items .slider1,
+#radio5:checked ~ .slider-tn .slider-texts .text1 {
     margin-left: -80%;
 }

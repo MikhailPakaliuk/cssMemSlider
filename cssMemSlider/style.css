@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    background-color: rgba(131, 83, 144, 0.744);
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 60rem;
+    height: auto;
+}
+
+.slider-items {
+    width: 500%;
+    height: 100%;
+    padding-bottom: 1rem;
+    display: flex;
+}
+
+.slider-items .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    transition: all 0.5s ease;
+}
+
+.slider-items .item img {
+    max-width: 100%;
+    height: auto;
+}
+
+input {
+    visibility: hidden;
+}
+
+.slider-tn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.slider-texts {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-texts-wrapper {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slider-texts-wrapper .text {
+    width: 20%;
+    transition: all 0.5s ease;
+}
+
+.slider-texts-wrapper .text span {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.slider-nav {
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+}
+
+.slider-nav .slider-nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.slider-nav .slider-nav-item span {
+    display: block;
+    width: 0.6rem;
+    height: 0.5rem;
+    background-color: aquamarine;
+    border: 0.15rem solid aquamarine;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.slider-nav .slider-nav-item span:hover,
+.slider-nav .slider-nav-item:hover span {
+    background-color: azure;
+    border-color: azure;
+}
+
+.slider-nav .slider-nav-item span:active,
+.slider-nav .slider-nav-item:active span {
+    background-color: transparent;
+    border-color: azure;
+}
+
+#radio1:checked ~ .slider-tn .slider-nav label[for="radio1"] span,
+#radio2:checked ~ .slider-tn .slider-nav label[for="radio2"] span,
+#radio3:checked ~ .slider-tn .slider-nav label[for="radio3"] span,
+#radio4:checked ~ .slider-tn .slider-nav label[for="radio4"] span,
+#radio5:checked ~ .slider-tn .slider-nav label[for="radio5"] span {
+    background-color: transparent;
+    border-color: aquamarine;
+}
+
+#radio1:checked ~ .slider-tn .slider-nav label[for="radio1"]:hover span,
+#radio2:checked ~ .slider-tn .slider-nav label[for="radio2"]:hover span,
+#radio3:checked ~ .slider-tn .slider-nav label[for="radio3"]:hover span,
+#radio4:checked ~ .slider-tn .slider-nav label[for="radio4"]:hover span,
+#radio5:checked ~ .slider-tn .slider-nav label[for="radio5"]:hover span {
+    background-color: transparent;
+    border-color: azure;
+}
+
+#radio1:checked ~ .slider-items .slider1,
+#radio1:checked ~ .slider-tn .slider-texts .text1 {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .slider-items .slider1,
+#radio2:checked ~ .slider-tn .slider-texts .text1 {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .slider-items .slider1,
+#radio3:checked ~ .slider-tn .slider-texts .text1 {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .slider-items .slider1,
+#radio4:checked ~ .slider-tn .slider-texts .text1 {
+    margin-left: -60%;
+}
+
+#radio5:checked ~ .slider-items .slider1,
+#radio5:checked ~ .slider-tn .slider-texts .text1 {
+    margin-left: -80%;
+}
+
+@media (max-width: 475px) {
+    .slider-tn {
+        flex-direction: column-reverse;
+    }
+}

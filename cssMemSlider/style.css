@@ -102,21 +102,13 @@ input {
     transition: all 0.5s ease;
 }
 
-.slider-nav .slider-nav-item span:hover {
-    background-color: azure;
-    border-color: azure;
-}
-
+.slider-nav .slider-nav-item span:hover,
 .slider-nav .slider-nav-item:hover span {
     background-color: azure;
     border-color: azure;
 }
 
-.slider-nav .slider-nav-item span:active {
-    background-color: transparent;
-    border-color: azure;
-}
-
+.slider-nav .slider-nav-item span:active,
 .slider-nav .slider-nav-item:active span {
     background-color: transparent;
     border-color: azure;
@@ -125,7 +117,8 @@ input {
 #radio1:checked ~ .slider-tn .slider-nav label[for="radio1"] span,
 #radio2:checked ~ .slider-tn .slider-nav label[for="radio2"] span,
 #radio3:checked ~ .slider-tn .slider-nav label[for="radio3"] span,
-#radio4:checked ~ .slider-tn .slider-nav label[for="radio4"] span {
+#radio4:checked ~ .slider-tn .slider-nav label[for="radio4"] span,
+#radio5:checked ~ .slider-tn .slider-nav label[for="radio5"] span {
     background-color: transparent;
     border-color: aquamarine;
 }
@@ -133,7 +126,8 @@ input {
 #radio1:checked ~ .slider-tn .slider-nav label[for="radio1"]:hover span,
 #radio2:checked ~ .slider-tn .slider-nav label[for="radio2"]:hover span,
 #radio3:checked ~ .slider-tn .slider-nav label[for="radio3"]:hover span,
-#radio4:checked ~ .slider-tn .slider-nav label[for="radio4"]:hover span {
+#radio4:checked ~ .slider-tn .slider-nav label[for="radio4"]:hover span,
+#radio5:checked ~ .slider-tn .slider-nav label[for="radio5"]:hover span {
     background-color: transparent;
     border-color: azure;
 }

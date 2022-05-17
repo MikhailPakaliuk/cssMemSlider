@@ -102,57 +102,69 @@ input {
     transition: all 0.5s ease;
 }
 
-
-
 .slider-nav .slider-nav-item span:hover {
-    background-color: #fff;
-    border-color: #fff;
+    background-color: azure;
+    border-color: azure;
 }
 
 .slider-nav .slider-nav-item:hover span {
-    background-color: #fff;
-    border-color: #fff;
+    background-color: azure;
+    border-color: azure;
 }
 
 .slider-nav .slider-nav-item span:active {
-    background-color: rgba(255, 255, 255, 0);
-    border-color: #fff;
+    background-color: transparent;
+    border-color: azure;
 }
 
 .slider-nav .slider-nav-item:active span {
-    background-color: rgba(255, 255, 255, 0);
-    border-color: #fff;
+    background-color: transparent;
+    border-color: azure;
 }
 
-#radio1:checked~.slider-items .slider1,
-#radio1:checked~.slider-tn .slider-texts .text1 {
+#radio1:checked ~ .slider-tn .slider-nav label[for="radio1"] span,
+#radio2:checked ~ .slider-tn .slider-nav label[for="radio2"] span,
+#radio3:checked ~ .slider-tn .slider-nav label[for="radio3"] span,
+#radio4:checked ~ .slider-tn .slider-nav label[for="radio4"] span {
+    background-color: transparent;
+    border-color: aquamarine;
+}
+
+#radio1:checked ~ .slider-tn .slider-nav label[for="radio1"]:hover span,
+#radio2:checked ~ .slider-tn .slider-nav label[for="radio2"]:hover span,
+#radio3:checked ~ .slider-tn .slider-nav label[for="radio3"]:hover span,
+#radio4:checked ~ .slider-tn .slider-nav label[for="radio4"]:hover span {
+    background-color: transparent;
+    border-color: azure;
+}
+
+#radio1:checked ~ .slider-items .slider1,
+#radio1:checked ~ .slider-tn .slider-texts .text1 {
     margin-left: 0;
 }
 
-#radio2:checked~.slider-items .slider1,
-#radio2:checked~.slider-tn .slider-texts .text1 {
+#radio2:checked ~ .slider-items .slider1,
+#radio2:checked ~ .slider-tn .slider-texts .text1 {
     margin-left: -20%;
 }
 
-#radio3:checked~.slider-items .slider1,
-#radio3:checked~.slider-tn .slider-texts .text1 {
+#radio3:checked ~ .slider-items .slider1,
+#radio3:checked ~ .slider-tn .slider-texts .text1 {
     margin-left: -40%;
 }
 
-#radio4:checked~.slider-items .slider1,
-#radio4:checked~.slider-tn .slider-texts .text1 {
+#radio4:checked ~ .slider-items .slider1,
+#radio4:checked ~ .slider-tn .slider-texts .text1 {
     margin-left: -60%;
 }
 
-#radio5:checked~.slider-items .slider1,
-#radio5:checked~.slider-tn .slider-texts .text1 {
+#radio5:checked ~ .slider-items .slider1,
+#radio5:checked ~ .slider-tn .slider-texts .text1 {
     margin-left: -80%;
 }
 
-@media (max-width:475px) {
+@media (max-width: 475px) {
     .slider-tn {
         flex-direction: column-reverse;
     }
-    
-
 }
